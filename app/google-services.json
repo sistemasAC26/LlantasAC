@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1011034411151",
+    "project_id": "autolineas-inspeccion",
+    "storage_bucket": "autolineas-inspeccion.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011034411151:android:2f762cc643d5038172a0fa",
+        "android_client_info": {
+          "package_name": "com.example.llantasac"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoN-zHKspu6LcMflUziRli8HdD9YR4_Vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

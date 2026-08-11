@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Llantas AC</string>
+    <string name="login_titulo">Bienvenido</string>
+    <string name="login_subtitulo">Ingresa tus credenciales para acceder\na tu área de trabajo.</string>
+    <string name="login_etiqueta_correo">CORREO ELECTRÓNICO</string>
+    <string name="login_pista_correo">usuario@autolineasac.com</string>
+    <string name="login_etiqueta_contrasena">CONTRASEÑA</string>
+    <string name="login_pista_contrasena">••••••••</string>
+    <string name="login_boton_iniciar">Iniciar Sesión →</string>
+    <string name="login_pie_pagina">Autolíneas AC © 2026 - Sistema interno de gestión</string>
+    <string name="bandeja_titulo_principal">Bandeja Llantas</string>
+    <string name="bandeja_subtitulo">AUTOLÍNEAS AC - INSPECCIÓN DE LLANTAS</string>
+    <string name="bandeja_usuario_ejemplo">👤 CARLOS GARCIA ▼</string>
+    <string name="bandeja_seccion_unidades">UNIDADES EN PATIO</string>
+    <string name="bandeja_titulo_pendientes">Pendientes de Inspección de Llantas</string>
+    <string name="bandeja_instrucciones">Selecciona una unidad para iniciar su revisión de llantas y perfil.</string>
+    <string name="bandeja_boton_lista">Lista</string>
+    <string name="bandeja_boton_cuadricula">Cuadrícula</string>
+    <string name="bandeja_fecha_ejemplo">martes, 11 de agosto de 2026</string>
+</resources>

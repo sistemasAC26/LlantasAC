@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E5E7EB"
+    app:cardBackgroundColor="#F9FAFB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Tractor y Caja -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvNombres"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AC241 / C163"
+                android:textColor="#1F2937"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Estado de Inspección -->
+            <TextView
+                android:id="@+id/tvEstadoLlantas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_bg"
+                android:text="PENDIENTE"
+                android:textColor="#0369A1"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp" />
+        </LinearLayout>
+
+        <!-- Ruta simulada -->
+        <TextView
+            android:id="@+id/tvRuta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CD GUZMAN -> NOG"
+            android:textColor="#6B7280"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <!-- Info Adicional (Datos quemados por ahora) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tipo de Carga"
+                android:textColor="#9CA3AF"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textColor="#1F2937"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Estado"
+                android:textColor="#9CA3AF"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cargada"
+                android:textColor="#1F2937"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <!-- Botón Inferior -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fuera de Patio (Inactivo)"
+            android:textColor="#6B7280"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:background="@drawable/input_bg"
+            android:paddingVertical="8dp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
