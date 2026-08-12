@@ -19,6 +19,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Esto le genera un Pase VIP a tu tablet (App Check Debug Provider)
+        com.google.firebase.FirebaseApp.initializeApp(this);
+        com.google.firebase.appcheck.FirebaseAppCheck firebaseAppCheck = com.google.firebase.appcheck.FirebaseAppCheck.getInstance();
+        firebaseAppCheck.installAppCheckProviderFactory(
+                com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory.getInstance()
+        );
+
+        // Inicializa la base de datos para autenticación
         mAuth = FirebaseAuth.getInstance();
 
         emailInput = findViewById(R.id.emailInput);
