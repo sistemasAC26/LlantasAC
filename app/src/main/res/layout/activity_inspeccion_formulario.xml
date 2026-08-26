@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9FAFB">
+
+    <!-- Header Principal Oscuro -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#0F172A"
+        android:paddingTop="80dp"
+        android:paddingBottom="24dp"
+        android:paddingHorizontal="24dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/logo_rounded" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/tvFormUnidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AC08 / B01"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/tvFormRuta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CD GUZMAN → CDMX"
+                android:textColor="#94A3B8"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnBackContainer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#1E293B">
+
+            <ImageButton
+                android:id="@+id/btnCerrar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:tint="#FFFFFF"
+                android:padding="10dp"
+                android:scaleType="centerInside"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#F59E0B" />
+
+    <!-- Barra de Navegación Secundaria -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:background="#FFFFFF">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnCambiarTipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#F1F5F9"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/form_cambiar_tipo"
+                android:textColor="#475569"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvFormSeccionTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Llantas de Caja"
+            android:textColor="#0F172A"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Contenedor Dinámico de Llantas -->
+            <LinearLayout
+                android:id="@+id/llTiresContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <!-- Observaciones Generales -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E2E8F0">
+                <LinearLayout
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView android:text="@string/form_observaciones_label" android:textSize="11sp" android:textStyle="bold" android:textColor="#475569" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/etObservacionesGenerales"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/input_bg"
+                        android:gravity="top|start"
+                        android:hint="@string/form_observaciones_hint"
+                        android:padding="12dp"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Confirmación -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardConfirmacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E2E8F0"
+                app:cardBackgroundColor="#FFFFFF">
+                <LinearLayout
+                    android:padding="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:id="@+id/chkConformidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#10B981" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/form_conformidad_label"
+                        android:textColor="#1E293B"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Firma del Inspector (Solo lectura, se selecciona en la Bandeja) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:id="@+id/tvInspectorConfirmacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="GARCIA BERNAL CARLOS EDUARDO"
+                    android:textColor="#0F172A"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.05" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/form_inspector_autorizado"
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="40dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer Fijo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="56dp"
+        android:background="#FFFFFF"
+        android:elevation="8dp">
+
+        <Button
+            android:id="@+id/btnFinalizarInspeccion"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/form_boton_finalizar"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#F59E0B"
+            app:cornerRadius="8dp" />
+
+        <Button
+            android:id="@+id/btnEnviarReparacion"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/form_boton_enviar_reparacion"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="#EF4444"
+            android:backgroundTint="#FFFFFF"
+            app:strokeColor="#EF4444"
+            app:strokeWidth="1dp"
+            app:cornerRadius="8dp"
+            android:visibility="gone"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+    </LinearLayout>
+
+</LinearLayout>

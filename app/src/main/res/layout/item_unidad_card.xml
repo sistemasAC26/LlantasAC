@@ -45,8 +45,8 @@
             android:id="@+id/llGps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="end"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
             android:layout_alignParentEnd="true">
 
             <androidx.cardview.widget.CardView
@@ -61,7 +61,7 @@
                     android:id="@+id/tvBadgeGps"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Buscando..."
+                    android:text="@string/unidad_buscando_gps"
                     android:textSize="11sp"
                     android:textStyle="bold"
                     android:textColor="#64748B"
@@ -69,18 +69,31 @@
                     android:paddingVertical="4dp"/>
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/tvUbicacion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textSize="10sp"
-                android:textColor="#64748B"
-                android:layout_marginTop="4dp"
-                android:maxWidth="160dp"
-                android:gravity="end"
-                android:maxLines="2"/>
+            <ImageButton
+                android:id="@+id/btnEliminarUnidad"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_delete"
+                app:tint="#94A3B8"
+                android:padding="6dp"
+                android:scaleType="centerInside"/>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvUbicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="10sp"
+            android:textColor="#64748B"
+            android:layout_marginTop="4dp"
+            android:maxWidth="160dp"
+            android:layout_below="@id/llGps"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:maxLines="2"/>
     </RelativeLayout>
 
     <View
@@ -89,19 +102,18 @@
         android:background="#E5E7EB"
         android:layout_marginVertical="12dp"/>
 
-    <!-- Detalles -->
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Tipo de Carga" android:textSize="12sp" android:textColor="#6B7280"/>
+        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/unidad_label_tipo_carga" android:textSize="12sp" android:textColor="#6B7280"/>
         <TextView android:id="@+id/tvTipoCarga" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:textSize="12sp" android:textStyle="bold" android:textColor="#1F2937"/>
     </LinearLayout>
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp">
-        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Estado" android:textSize="12sp" android:textColor="#6B7280"/>
+        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/unidad_label_estado" android:textSize="12sp" android:textColor="#6B7280"/>
         <TextView android:id="@+id/tvEstadoCarga" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="vacia" android:textSize="12sp" android:textStyle="bold" android:textColor="#1F2937"/>
     </LinearLayout>
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp">
-        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Producto" android:textSize="12sp" android:textColor="#6B7280"/>
+        <TextView android:id="@+id/tvLabelProducto" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/unidad_label_producto" android:textSize="12sp" android:textColor="#6B7280"/>
         <TextView android:id="@+id/tvProducto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:textSize="12sp" android:textStyle="bold" android:textColor="#1F2937"/>
     </LinearLayout>
 
@@ -113,14 +125,14 @@
         android:layout_marginTop="16dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="0dp"
-        app:cardBackgroundColor="#F1F5F9">
+        app:cardBackgroundColor="#F59E0B">
 
         <TextView
             android:id="@+id/btnAccion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cargando..."
-            android:textColor="#64748B"
+            android:text="@string/bandeja_boton_inspeccion"
+            android:textColor="#FFFFFF"
             android:textSize="13sp"
             android:textStyle="bold"
             android:gravity="center"

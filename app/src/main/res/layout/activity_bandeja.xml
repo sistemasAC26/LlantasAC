@@ -9,172 +9,254 @@
     android:background="#F3F4F6"
     tools:context=".BandejaActivity">
 
-    <!-- 1. Barra Superior Oscura MEJORADA (Con margen para que no choque con la hora) -->
-    <LinearLayout
+    <!-- 1. Barra Superior Oscura Rediseñada (Ajuste de Títulos y Fecha) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="#0F172A"
-        android:paddingTop="48dp"
+        android:paddingTop="64dp"
         android:paddingBottom="24dp"
         android:paddingHorizontal="24dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/ivLogoBandeja"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/logo_rounded"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/logo_rounded" />
+        <LinearLayout
+            android:id="@+id/llBandejaTitles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toEndOf="@id/ivLogoBandeja"
+            app:layout_constraintEnd_toStartOf="@id/cardInspectorGlobal"
+            app:layout_constraintTop_toTopOf="@id/ivLogoBandeja">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bandeja_titulo_principal"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.01"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bandeja_subtitulo"
+                android:textColor="#94A3B8"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="jueves, 20 de agosto de 2026"
+            android:textColor="#94A3B8"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/llBandejaTitles"
+            app:layout_constraintStart_toStartOf="@id/llBandejaTitles" />
+
+        <TextView
+            android:id="@+id/textEstadoConexion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/estado_en_linea"
+            android:textColor="#10B981"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/textFecha"
+            app:layout_constraintBottom_toBottomOf="@id/textFecha"
+            app:layout_constraintStart_toEndOf="@id/textFecha" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardInspectorGlobal"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#334155"
+            app:cardBackgroundColor="#0F172A"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="16dp">
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bandeja_titulo_principal"
-                    android:textColor="#FFFFFF"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.01"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    app:tint="#94A3B8" />
 
-                <TextView
+                <Spinner
+                    android:id="@+id/spinnerInspectoresGlobal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bandeja_subtitulo"
-                    android:textColor="#94A3B8"
-                    android:textSize="10sp"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.05"
-                    android:layout_marginTop="2dp" />
+                    android:layout_height="match_parent"
+                    android:minWidth="120dp"
+                    android:background="@android:color/transparent"
+                    android:popupBackground="#FFFFFF" />
             </LinearLayout>
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="24dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:id="@+id/textFecha"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/bandeja_fecha_ejemplo"
-                android:textColor="#CBD5E1"
-                android:textSize="13sp" />
-
-            <!-- Selector de Usuario estilo "Píldora" moderna -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="#1E293B"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="0dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bandeja_usuario_ejemplo"
-                    android:textColor="#F8FAFC"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="8dp"/>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- 2. Línea Naranja Separadora -->
     <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"
+        android:layout_height="4dp"
         android:background="#F59E0B" />
 
-    <!-- 3. Contenido Principal Deslizable -->
-    <ScrollView
+    <!-- 2b. Selector de Pestañas (Tabs) estilo Web -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:paddingHorizontal="24dp"
+        android:elevation="2dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/tabInspeccion"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
-
+            android:paddingTop="16dp"
+            android:gravity="center">
             <TextView
+                android:id="@+id/textTabInspeccion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/bandeja_seccion_unidades"
-                android:textColor="#6B7280"
-                android:textSize="11sp"
+                android:text="@string/bandeja_tab_inspeccion"
+                android:textColor="#06B6D4"
+                android:textSize="14sp"
                 android:textStyle="bold"
-                android:letterSpacing="0.05" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/bandeja_titulo_pendientes"
-                android:textColor="#111827"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginTop="4dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/bandeja_instrucciones"
-                android:textColor="#6B7280"
-                android:textSize="13sp"
-                android:layout_marginTop="4dp" />
-
-            <!-- Botones Lista/Cuadrícula -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/input_bg"
-                android:layout_marginTop="16dp"
-                android:padding="4dp">
-
-                <TextView
-                    android:id="@+id/btnLista"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bandeja_boton_lista"
-                    android:textColor="#6B7280"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="8dp" />
-
-                <TextView
-                    android:id="@+id/btnCuadricula"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bandeja_boton_cuadricula"
-                    android:textColor="#1F2937"
-                    android:textStyle="bold"
-                    android:background="#FFFFFF"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="8dp" />
-            </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerBandeja"
+                android:paddingBottom="12dp"/>
+            <View
+                android:id="@+id/indicatorInspeccion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:nestedScrollingEnabled="false" />
-
+                android:layout_height="3dp"
+                android:background="#06B6D4" />
         </LinearLayout>
-    </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/tabTaller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:layout_marginStart="24dp"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/textTabTaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bandeja_tab_taller"
+                android:textColor="#64748B"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:paddingBottom="12dp"/>
+            <View
+                android:id="@+id/indicatorTaller"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 3. Contenido Principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textSeccionTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bandeja_seccion_unidades"
+            android:textColor="#6B7280"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05" />
+
+        <TextView
+            android:id="@+id/textSeccionTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bandeja_titulo_pendientes"
+            android:textColor="#111827"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/textSeccionDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bandeja_instrucciones"
+            android:textColor="#6B7280"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Botones Lista/Cuadrícula -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/input_bg"
+            android:layout_marginTop="16dp"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/btnLista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bandeja_boton_lista"
+                android:textColor="#6B7280"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp" />
+
+            <TextView
+                android:id="@+id/btnCuadricula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bandeja_boton_cuadricula"
+                android:textColor="#1F2937"
+                android:textStyle="bold"
+                android:background="#FFFFFF"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerBandeja"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
 </LinearLayout>

@@ -3,7 +3,8 @@
     <style name="Base.Theme.LlantasAC" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+        <!-- <item name="android:windowSplashScreenBackground">#182B50</item> -->
+     </style>
 
-    <style name="Theme.LlantasAC" parent="Base.Theme.LlantasAC" />
-</resources>
+     <style name="Theme.LlantasAC" parent="Base.Theme.LlantasAC" />
+ </resources>

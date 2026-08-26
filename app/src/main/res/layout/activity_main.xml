@@ -105,12 +105,24 @@
                     android:textSize="14sp"/>
             </LinearLayout>
 
+            <!-- Checkbox Recordarme -->
+            <CheckBox
+                android:id="@+id/checkRecordarme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="start"
+                android:text="@string/login_recordarme"
+                android:textColor="#6B7280"
+                android:textSize="13sp"
+                android:buttonTint="#22324C" />
+
             <!-- Botón -->
             <Button
                 android:id="@+id/loginButton"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/login_boton_iniciar"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"

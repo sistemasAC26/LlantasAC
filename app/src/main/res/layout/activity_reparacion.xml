@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8FAFC">
+
+    <!-- Header Estilo Web -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#0F172A"
+        android:paddingTop="80dp"
+        android:paddingBottom="24dp"
+        android:paddingHorizontal="24dp">
+
+        <ImageView
+            android:id="@+id/ivLogoHeader"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/logo_rounded" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/tvUnidadTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="E11 / ACX98"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/tvRutaSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="CD GUZMAN → CLN"
+                android:textColor="#94A3B8"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnBackContainer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#1E293B">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:tint="#FFFFFF"
+                android:padding="10dp"
+                android:scaleType="centerInside"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#F59E0B" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- 4 Tarjetas Informativas (Adaptables para Tablet) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <!-- UNIDAD -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="8dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E2E8F0"
+                    app:cardBackgroundColor="#FFFFFF">
+                    <LinearLayout android:padding="12dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="90dp" android:gravity="center_vertical">
+                        <TextView android:text="@string/reparacion_label_unidad" android:textSize="11sp" android:textColor="#64748B" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:id="@+id/tvCardUnidad" tools:text="ACX98 / E11" android:textSize="14sp" android:textStyle="bold" android:textColor="#0F172A" android:layout_marginTop="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- RUTA -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="8dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E2E8F0"
+                    app:cardBackgroundColor="#FFFFFF">
+                    <LinearLayout android:padding="12dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="90dp" android:gravity="center_vertical">
+                        <TextView android:text="@string/reparacion_label_ruta" android:textSize="11sp" android:textColor="#64748B" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:id="@+id/tvCardRuta" tools:text="CD GUZMAN → CLN" android:textSize="14sp" android:textStyle="bold" android:textColor="#0F172A" android:layout_marginTop="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- TIPO DE CARGA -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="8dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E2E8F0"
+                    app:cardBackgroundColor="#FFFFFF">
+                    <LinearLayout android:padding="12dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="90dp" android:gravity="center_vertical">
+                        <TextView android:text="@string/reparacion_label_carga" android:textSize="11sp" android:textColor="#64748B" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:id="@+id/tvCardTipoCarga" tools:text="SECO" android:textSize="14sp" android:textStyle="bold" android:textColor="#0F172A" android:layout_marginTop="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- ESTADO -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="8dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E2E8F0"
+                    app:cardBackgroundColor="#FFFFFF">
+                    <LinearLayout android:padding="12dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="90dp" android:gravity="center_vertical">
+                        <TextView android:text="@string/reparacion_label_estado" android:textSize="11sp" android:textColor="#64748B" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:id="@+id/tvCardEstado" tools:text="vacia" android:textSize="14sp" android:textStyle="bold" android:textColor="#0F172A" android:layout_marginTop="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reparacion_titulo_daños"
+                android:textColor="#0F172A"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp" />
+
+            <!-- Contenedor Blanco Principal -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="8dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E2E8F0"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reparacion_mecanico_label"
+                        android:textColor="#475569"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/input_bg"
+                        android:backgroundTint="#F1F5F9">
+
+                        <Spinner
+                            android:id="@+id/spinnerMecanicos"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:paddingHorizontal="12dp"
+                            android:background="@android:color/transparent" />
+
+                        <TextView
+                            android:id="@+id/tvMecanicoAsignado"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="16dp"
+                            android:text="@string/reparacion_mecanico_hint"
+                            android:textStyle="bold"
+                            android:textColor="#0F172A"
+                            android:visibility="gone"
+                            android:background="#F1F5F9"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E2E8F0"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"/>
+
+                    <TextView
+                        android:id="@+id/tvLabelDanosTractor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reparacion_tractor_label"
+                        android:textColor="#0F172A"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/llDanosContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="16dp">
+                        <!-- Aquí se añadirán dinámicamente los items de daños -->
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer Fijo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="56dp"
+        android:background="#FFFFFF"
+        android:elevation="8dp">
+
+        <Button
+            android:id="@+id/btnAccionPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/reparacion_boton_notificar"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#EA580C"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+</LinearLayout>

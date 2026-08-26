@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Llantas AC</string>
+
+    <!-- Login -->
     <string name="login_titulo">Bienvenido</string>
     <string name="login_subtitulo">Ingresa tus credenciales para acceder\na tu área de trabajo.</string>
     <string name="login_etiqueta_correo">CORREO ELECTRÓNICO</string>
@@ -7,14 +9,106 @@
     <string name="login_etiqueta_contrasena">CONTRASEÑA</string>
     <string name="login_pista_contrasena">••••••••</string>
     <string name="login_boton_iniciar">Iniciar Sesión →</string>
+    <string name="login_recordarme">Recordar mis credenciales</string>
     <string name="login_pie_pagina">Autolíneas AC © 2026 - Sistema interno de gestión</string>
+    <string name="login_error_campos">Llena todos los campos</string>
+    <string name="login_error_autenticacion">Error de autenticación: %1$s</string>
+
+    <!-- Bandeja -->
     <string name="bandeja_titulo_principal">Bandeja Llantas</string>
     <string name="bandeja_subtitulo">AUTOLÍNEAS AC - INSPECCIÓN DE LLANTAS</string>
     <string name="bandeja_usuario_ejemplo">👤 CARLOS GARCIA ▼</string>
     <string name="bandeja_seccion_unidades">UNIDADES EN PATIO</string>
+    <string name="bandeja_seccion_taller">REPARACIONES LLANTAS</string>
     <string name="bandeja_titulo_pendientes">Pendientes de Inspección de Llantas</string>
     <string name="bandeja_instrucciones">Selecciona una unidad para iniciar su revisión de llantas y perfil.</string>
+    <string name="bandeja_boton_inspeccion">Iniciar Inspección de Llantas</string>
     <string name="bandeja_boton_lista">Lista</string>
     <string name="bandeja_boton_cuadricula">Cuadrícula</string>
+    <string name="bandeja_tab_inspeccion">Bandeja Inspección</string>
+    <string name="bandeja_tab_taller">Taller Llantas</string>
+    <string name="bandeja_titulo_taller">Unidades en Taller Llantas</string>
+    <string name="bandeja_subtitulo_taller">Unidades reportadas con daños en llantas pendientes de reparación.</string>
     <string name="bandeja_fecha_ejemplo">martes, 11 de agosto de 2026</string>
+    <string name="bandeja_seleccionar_inspector">Seleccionar inspector&#8230;</string>
+
+    <!-- Selector de Inspección -->
+    <string name="selector_inspeccion_titulo">NUEVA INSPECCIÓN DE LLANTAS</string>
+    <string name="selector_inspeccion_pregunta">¿Qué vas a inspeccionar?</string>
+    <string name="selector_inspeccion_desc">Selecciona el tipo de llanta para continuar</string>
+    <string name="selector_tipo_tractor">Llantas de Tractor</string>
+    <string name="selector_tipo_tractor_desc">Ejes delantero y trasero</string>
+    <string name="selector_tipo_caja">Llantas de Caja</string>
+    <string name="selector_tipo_caja_desc">Ejes de remolque o semirremolque</string>
+    <string name="selector_completada">(Ya completada)</string>
+    <string name="selector_sin_caja">(Sin Caja registrada)</string>
+
+    <!-- Formulario de Inspección -->
+    <string name="form_cambiar_tipo">← Cambiar tipo</string>
+    <string name="form_observaciones_label">OBSERVACIONES GENERALES</string>
+    <string name="form_observaciones_hint">Comentarios adicionales sobre la unidad...</string>
+    <string name="form_conformidad_label">Confirmo que revisé la unidad de acuerdo a los lineamientos y los datos son verídicos.</string>
+    <string name="form_inspector_autorizado">Inspector Autorizado</string>
+    <string name="form_boton_finalizar">Finalizar Inspección</string>
+    <string name="form_boton_enviar_reparacion">Enviar a reparación</string>
+    <string name="form_inspector_no_seleccionado">Inspector no seleccionado</string>
+    <string name="form_error_confirmacion">Debes marcar la confirmación</string>
+    <string name="form_error_inspector">Debes seleccionar un inspector en la bandeja principal</string>
+    <string name="form_exito">¡Inspección finalizada con éxito!</string>
+    <string name="form_guardando">Guardando inspección...</string>
+    <string name="form_cargando_evidencia">Guardando evidencia...</string>
+    <string name="form_evidencia_exito">Evidencia capturada con éxito</string>
+    <string name="form_evidencia_error">Error al guardar foto</string>
+    <string name="form_permiso_camara">Se requiere permiso de cámara para las evidencias</string>
+
+    <!-- Item Inspección Llanta -->
+    <string name="item_llanta_fierro">Fierro</string>
+    <string name="item_llanta_aluminio">Aluminio</string>
+    <string name="item_llanta_bien">✓ Bien</string>
+    <string name="item_llanta_dano">× Daño</string>
+    <string name="item_llanta_na">— N/A</string>
+    <string name="item_llanta_psi_entrada">PSI ENTRADA</string>
+    <string name="item_llanta_psi_salida">PSI SALIDA</string>
+    <string name="item_llanta_psi_hint">PSI</string>
+    <string name="item_llanta_nivel_label">NIVEL DE DAÑO</string>
+    <string name="item_llanta_nivel_leve">Leve</string>
+    <string name="item_llanta_nivel_moderado">Moderado</string>
+    <string name="item_llanta_nivel_alto">Alto</string>
+    <string name="item_llanta_tipo_dano">TIPO DE DAÑO</string>
+    <string name="item_llanta_fotos_label">FOTOS DEL DAÑO</string>
+    <string name="item_llanta_nota_hint">Notas adicionales sobre el daño...</string>
+
+    <!-- Reparación -->
+    <string name="reparacion_label_unidad">UNIDAD</string>
+    <string name="reparacion_label_ruta">RUTA</string>
+    <string name="reparacion_label_carga">TIPO DE CARGA</string>
+    <string name="reparacion_label_estado">ESTADO</string>
+    <string name="reparacion_titulo_daños">Reparación de Daños en Llantas</string>
+    <string name="reparacion_mecanico_label">Mecánico Asignado</string>
+    <string name="reparacion_mecanico_hint">Nombre del Mecánico</string>
+    <string name="reparacion_tractor_label">Daños en Tractor</string>
+    <string name="reparacion_caja_label">Daños en Caja</string>
+    <string name="reparacion_danos_count">Daño(s)</string>
+    <string name="reparacion_boton_notificar">Notificar Tarea</string>
+    <string name="reparacion_boton_finalizar">Finalizar Reparación</string>
+    <string name="reparacion_evidencia_btn">Ver Evidencia</string>
+    <string name="reparacion_pendiente">Pendiente</string>
+    <string name="reparacion_reparado">Reparado</string>
+
+    <!-- Unidad Card -->
+    <string name="unidad_label_tipo_carga">Tipo Carga</string>
+    <string name="unidad_label_estado">Estado</string>
+    <string name="unidad_label_producto">Producto</string>
+    <string name="unidad_label_reparaciones">Reparaciones</string>
+    <string name="unidad_ubicacion_desconocida">Ubicación desconocida</string>
+    <string name="unidad_en_patio">En Patio</string>
+    <string name="unidad_en_camino">En Camino</string>
+    <string name="unidad_sin_senal">Sin Señal</string>
+    <string name="unidad_boton_reparar">Reparar Unidad</string>
+    <string name="unidad_fuera_patio">Fuera de Patio (Inactivo)</string>
+    <string name="unidad_buscando_gps">Cargando GPS&#8230;</string>
+
+    <!-- Conectividad -->
+    <string name="estado_en_linea">● En línea</string>
+    <string name="estado_sin_conexion">○ Sin conexión (Modo Offline)</string>
 </resources>

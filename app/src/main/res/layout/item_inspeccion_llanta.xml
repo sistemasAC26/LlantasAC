@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E2E8F0"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvPosicionTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Direccional izquierda"
+            android:textColor="#0F172A"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPosicionSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eje 1, lado izquierdo"
+            android:textColor="#64748B"
+            android:textSize="11sp" />
+
+        <!-- Material Selector -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnFierro"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="@string/item_llanta_fierro"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:textColor="#334155"
+                app:strokeColor="#E2E8F0"
+                app:strokeWidth="1dp"
+                android:backgroundTint="#FFFFFF"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+            <Button
+                android:id="@+id/btnAluminio"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="@string/item_llanta_aluminio"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:textColor="#334155"
+                app:strokeColor="#E2E8F0"
+                app:strokeWidth="1dp"
+                android:backgroundTint="#FFFFFF"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        </LinearLayout>
+
+        <!-- Status Selector -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <Button
+                android:id="@+id/btnStatusBien"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="@string/item_llanta_bien"
+                android:textColor="#334155"
+                android:textAllCaps="false"
+                app:strokeColor="#E2E8F0"
+                app:strokeWidth="1dp"
+                android:backgroundTint="#FFFFFF"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+            <Button
+                android:id="@+id/btnStatusDano"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="@string/item_llanta_dano"
+                android:textColor="#334155"
+                android:textAllCaps="false"
+                app:strokeColor="#E2E8F0"
+                app:strokeWidth="1dp"
+                android:backgroundTint="#FFFFFF"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+            <Button
+                android:id="@+id/btnStatusNA"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="@string/item_llanta_na"
+                android:textColor="#334155"
+                android:textAllCaps="false"
+                app:strokeColor="#E2E8F0"
+                app:strokeWidth="1dp"
+                android:backgroundTint="#FFFFFF"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        </LinearLayout>
+
+        <!-- PSI Inputs -->
+        <LinearLayout
+            android:id="@+id/llPsiContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView android:text="@string/item_llanta_psi_entrada" android:textSize="9sp" android:textStyle="bold" android:textColor="#64748B" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/etPsiIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/input_bg"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:hint="@string/item_llanta_psi_hint"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+                <TextView android:text="@string/item_llanta_psi_salida" android:textSize="9sp" android:textStyle="bold" android:textColor="#64748B" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/etPsiOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/input_bg"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:hint="@string/item_llanta_psi_hint"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Panel de Daño (Oculto por defecto) -->
+        <LinearLayout
+            android:id="@+id/llDanoPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FEE2E2"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView android:text="@string/item_llanta_nivel_label" android:textSize="9sp" android:textStyle="bold" android:textColor="#64748B" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+                <Button android:id="@+id/btnNivelLeve" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:text="@string/item_llanta_nivel_leve" android:textSize="10sp" android:backgroundTint="#FFFFFF" android:textColor="#475569" android:textAllCaps="false" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                <Button android:id="@+id/btnNivelModerado" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_marginStart="4dp" android:text="@string/item_llanta_nivel_moderado" android:textSize="10sp" android:backgroundTint="#FFFFFF" android:textColor="#475569" android:textAllCaps="false" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                <Button android:id="@+id/btnNivelAlto" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_marginStart="4dp" android:text="@string/item_llanta_nivel_alto" android:textSize="10sp" android:backgroundTint="#FFFFFF" android:textColor="#475569" android:textAllCaps="false" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            </LinearLayout>
+
+            <TextView android:text="@string/item_llanta_tipo_dano" android:textSize="9sp" android:textStyle="bold" android:textColor="#64748B" android:layout_marginTop="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgDanoTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:chipSpacing="4dp"
+                app:singleSelection="false" />
+
+            <TextView android:text="@string/item_llanta_fotos_label" android:textSize="9sp" android:textStyle="bold" android:textColor="#64748B" android:layout_marginTop="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <!-- Botón de Cámara inicial -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardBtnCamera"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E2E8F0"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/dashed_border">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerInParent="true"
+                            android:src="@android:drawable/ic_menu_camera"
+                            app:tint="#94A3B8" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Contenedor para previsualización de fotos capturadas (Checkmarks verdes) -->
+                <LinearLayout
+                    android:id="@+id/llPhotosPreview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone" />
+
+                <!-- Botón de Más (+) (Siempre al final) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardBtnAddPhoto"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E2E8F0"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:visibility="gone">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/dashed_border">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerInParent="true"
+                            android:src="@android:drawable/ic_input_add"
+                            app:tint="#94A3B8" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etDanoNota"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/input_bg"
+                android:gravity="top|start"
+                android:hint="@string/item_llanta_nota_hint"
+                android:padding="12dp"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
