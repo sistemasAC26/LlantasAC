@@ -6,7 +6,7 @@
 
 **Llantas AC** es una aplicación móvil diseñada específicamente para la gestión y supervisión del estado de las llantas en la flota de Autolíneas AC. Permite a los inspectores realizar revisiones detalladas en patio, reportar daños de forma visual y coordinar reparaciones con el equipo de taller en tiempo real.
 
-## 🚀 Características Principales
+## Características Principales
 
 ### 1. Gestión de Inspecciones
 *   **Bandeja Inteligente:** Visualización de unidades pendientes de inspección en formatos de Lista o Cuadrícula.
@@ -28,7 +28,7 @@
 *   **Recordar Credenciales:** Función para facilitar el inicio de sesión diario de los inspectores.
 *   **Diseño Limpio:** Interfaz moderna estilo web con divisores elegantes y fácil lectura en condiciones de luz solar.
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 *   **Lenguaje:** Java (Android SDK)
 *   **Base de Datos:** Firebase Firestore (con persistencia local habilitada).
@@ -36,7 +36,7 @@
 *   **UI/UX:** Material Design Components & ConstraintLayout.
 *   **Rastreo Externo:** Integración con API REST para telemetría.
 
-## ⚙️ Configuración del Proyecto
+## Configuración del Proyecto
 
 Para ejecutar este proyecto localmente:
 
